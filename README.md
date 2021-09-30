@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+<img src="https://media.giphy.com/media/3o6Mbbs879ozZ9Yic0/giphy.gif?cid=ecf05e47p08s27t9sxqplnn6rdq2hcvbtws1u1dkzwqljwvu&rid=giphy.gif&ct=g" width="100%">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 10 - React Testing
 
-## Available Scripts
+Today we're going to learn how to write tests in React.
 
-In the project directory, you can run:
+- :link: Links
 
-### `npm start`
+  - [@testing-library](https://testing-library.com/docs/react-testing-library/intro/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - [examples](https://testing-library.com/docs/example-codesandbox)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About
 
-### `npm test`
+__Disclaimer:__
+_There are a lot of opinions on testing, what is what and how it should be done. I'm no expert and can only share from my own experience with testing._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+___Why write tests at all?___
+We write tests to ensure our code does what it's supposed to do. Generally, having code covered by tests gives you and your team more confidence in your applications performance over time.
 
-### `npm run build`
+___How do you write tests?___
+From convention, there are three types of tests:
+- Unit tests
+- Integration tests
+- End to end (e2e) tests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Unit tests are used for testing a single pure function. With pure I mean a function that doesn't have any side effects and will always return the same output, given the same input. If you have some complex calculation or logic in a function, you test it with a unit test.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Integration tests are for testing the integration of several parts of your application. Maybe you want to test a function that fetches som remote data, and then saves it to a file. It's common to mock (use fake data and fake function returns) to do this. You want to test a flow, not make actual database or http calls.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+E2E tests are for testing your whole application, end to end. These are often done in a test environment with a real database and real http calls.
 
-### `npm run eject`
+___So how do you test React code?___
+I think React code often finds itself a bit hard to put in one of these categories, and is often somewhere between Unit and Integration tests. They are component tests, and components are sometimes pure and only render stuff without any external dependencies. And sometimes they fetch some remote data, and then renders that data in some particular way, as a list of todos, for example.
+## Assignments
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This workshop contains a tic tac toe game. The main code for the game lives in `src/main.ts`. It's all in one file and I've done some work on making it difficult to understand. Using the guidelines listed above, You should try to clean the code into something that is easier to understand.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Extra
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If this is too easy or you have a lot of time after you've done, I suggest you try to to clean some other code in one of your projects.
