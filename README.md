@@ -42,6 +42,8 @@ With a TDD approach, you first write tests that describe your use case (function
 
 ## Assignments
 
-## Extra
+This app is a todo app! Start the project using `npm install && npm run dev` and check it out in your browser.
 
-If this is too easy or you have a lot of time after you've done, I suggest you try to to clean some other code in one of your projects.
+Your job is to write tests for this app.
+
+CONTINUE WRITING HERE
