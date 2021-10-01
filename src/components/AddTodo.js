@@ -1,12 +1,15 @@
 import React from 'react';
 
+// You can test that the value of the input changes
+// You can test that this function prop is called on click with correct arguments
+// You can test that the value is reset after button click
+// You can test that the button is disabled until input has value
+
 const AddTodo = ({ addTodo }) => {
   const [text, set] = React.useState('');
 
   const onChange = (e) => set(e.currentTarget.value);
   const onClick = () => {
-    if (!text) return;
-
     addTodo(text);
     set('');
   };
@@ -19,7 +22,9 @@ const AddTodo = ({ addTodo }) => {
         placeholder="Write something..."
         onChange={onChange}
       />
-      <button onClick={onClick}>Submit</button>
+      <button disabled={!Boolean(text)} onClick={onClick}>
+        Submit
+      </button>
     </div>
   );
 };

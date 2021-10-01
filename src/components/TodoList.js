@@ -1,6 +1,8 @@
 import React from 'react';
-
 import Todo from './Todo';
+
+// You can test that this list renders correcly by asserting
+// on the length and output of list elements
 
 const TodoList = ({ todos = [], removeTodo }) => {
   return (
