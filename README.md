@@ -49,13 +49,33 @@ Generally tests for javascript apps are run in a node environment, and Jest is a
 
 ## Setup
 
-I advice you to setup your editor so you have two terminals open inside the editor. One for running `npm run dev` and one for running your tests. This gives you quick feedback without having to navigate back and forth between applications to see what's going on.
-
 Start the project using `npm install && npm run dev` and check it out in your browser.
 Start the test running using `npm run test` in another terminal.
+
+I advice you to setup your editor so you have two terminals open inside the editor. One for running `npm run dev` and one for running your `npm run test`. This gives you quick feedback without having to navigate back and forth between applications to see what's going on.
 
 ## Assignments
 
 This app is a todo app and your job is to write tests for this app.
 
-You won't be doing TDD today since this workshop is about learning how to write tests, and I think that's easier if there is already code to test.
+1. Test the Todo component
+
+This component takes two props, `text` and `removeTodo`
+and renders the todo text and a button to remove it.
+You can test that the text renders and that the button calls `removeTodo` on click.
+
+2. Test the AddTodo component
+
+`AddTodo` keeps its own text state.
+You can test that the input updates on change and that the `addTodo` is called with the right arguments.
+
+3. Test the App component
+
+The App uses both the todolist and the addtodo.
+Test if adding a todo adds one item to the list of todos.
+
+## Extra: go full TDD!!!
+
+Think about more functionality for the todo app and describe them in tests. Then you create components and code to make the tests pass.
+
+Maybe get remote data from som api and display a random image as congratulations for the user whenever they add a new todo?
