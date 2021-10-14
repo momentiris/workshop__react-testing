@@ -15,7 +15,7 @@ const AddTodo = ({ addTodo }) => {
   };
 
   return (
-    <div className="add-todo">
+    <div className="add-todo" data-testid="add-todo">
       <input
         type="text"
         value={text}

@@ -6,7 +6,7 @@ import Todo from './Todo';
 
 const TodoList = ({ todos = [], removeTodo }) => {
   return (
-    <div className="todo-list">
+    <div className="todo-list" data-testid="todo-list">
       {todos.map((todo, i) => (
         <Todo key={todo + i} text={todo} removeTodo={() => removeTodo(i)} />
       ))}

@@ -4,7 +4,7 @@ import React from 'react';
 // You can test that removeTodo is called on click with the right arguments
 
 const Todo = ({ text, removeTodo }) => (
-  <div className="todo" key={text}>
+  <div className="todo" key={text} data-testid="todo">
     <span>{text}</span>
     <button onClick={removeTodo}>X</button>
   </div>
