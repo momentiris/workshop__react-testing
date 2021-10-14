@@ -15,12 +15,15 @@ Today we're going to learn how to write tests in React.
 ## About
 
 **Disclaimer:**
+
 _There are a lot of opinions on testing, what is what and how it should be done. I'm no expert and can only share from my own experience with testing._
 
 **_Why write tests at all?_**
+
 We write tests to ensure our code does what it's supposed to do. Generally, having code covered by tests gives you and your team more confidence in your applications performance over time.
 
 **_How do you write tests?_**
+
 From convention, there are three types of tests:
 
 - Unit tests
@@ -34,13 +37,16 @@ Integration tests are for testing the integration of several parts of your appli
 E2E tests are for testing your whole application, end to end. These are often done in a test environment with a real database and real http calls.
 
 **_So how do you test React code?_**
+
 I think React code often finds itself a bit hard to put in one of these categories, and is often somewhere between Unit and Integration tests. They are component tests, and components are sometimes pure and only render stuff without any external dependencies. And sometimes they fetch some remote data, and then renders that data in some particular way, as a list of todos for example.
 
 **_What is Test driven development?_**
+
 TDD is a concept and a method for writing tests and code.
 With a TDD approach, you first write tests that describe your use case (function, component, whatever). These tests will now fail. Then you write code to make the tests pass. There are many proclaimed advantages to TDD, but basically it's supposed to help you develop more sustainable and reliable applications.
 
 **_Ok, so what is React Testing Library again?_**
+
 React testing library is a npm package that helps you test react components. It lets you render react components in a test environment and provides many helper functions to interact with elements and to _assert_ on the output.
 
 Generally tests for javascript apps are run in a node environment, and Jest is another library that takes care of that. React testing library functions together with Jest.
